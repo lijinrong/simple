@@ -143,12 +143,14 @@
     {
       "name": "windows-msvc-vs17",
       "configurePreset": "windows-msvc-vs17",
+      "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
       "displayName": "Build Windows VS17",
       "description": "Build with VS17"
     },
     {
       "name": "windows-msvc-vs17-release",
       "configurePreset": "windows-msvc-vs17",
+      "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
       "displayName": "Build Windows VS17 (Release)",
       "description": "Build with VS17 (Release)",
       "configuration": "Release"
