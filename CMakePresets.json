@@ -100,6 +100,10 @@
         "SQLITE_ENABLE_FTS5": {
           "type": "BOOL",
           "value": "ON"
+        },
+        "BUILD_SHELL_STATIC": {
+          "type": "BOOL",
+          "value": "ON"
         }
       },
       "condition": {
