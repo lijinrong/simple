@@ -8,6 +8,10 @@ if (APPLE)
    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.11" CACHE STRING "Minimum OS X deployment version")
 endif()
 
+if(UNIX AND NOT APPLE)
+    set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -static-libgcc -static-libstdc++")
+endif()
+
 if (IOS)
   list(APPEND CMAKE_ARGS
     "-DPLATFORM=${PLATFORM}"
