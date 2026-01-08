@@ -136,7 +136,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-22.04, ubuntu-24.04-arm, ubuntu-latest]
+        os: [ubuntu-22.04, ubuntu-24.04-arm, ubuntu-20.04]
     timeout-minutes: 60
     steps:
     - name: "Release Build Type"
@@ -184,6 +184,7 @@ jobs:
       continue-on-error: false
       with:
         configurePreset: 'ninja-vcpkg-coverage'
+        configurePresetAdditionalArgs: '-DCMAKE_SHARED_LINKER_FLAGS="-static-libgcc -static-libstdc++'
         buildPreset: 'ninja-vcpkg-coverage'
 
     - name: 'Run CMake without coverage'
